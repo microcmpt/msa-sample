@@ -1,10 +1,11 @@
 package com.msa.sample;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * The type Hello rpc 4 j controller.
@@ -20,7 +21,7 @@ public class HelloRpc4jController {
     /**
      * The Hello rpc 4 j service.
      */
-    @Autowired
+    @Resource
 	private HelloServiceRpcClient helloServiceRpcClient;
 
     /**
