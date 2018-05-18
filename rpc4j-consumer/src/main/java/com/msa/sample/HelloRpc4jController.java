@@ -19,7 +19,7 @@ public class HelloRpc4jController {
      * The Hello rpc 4 j service.
      */
     @Autowired
-	private HelloRpc4jService helloRpc4jService;
+	private HelloServiceRpcClient helloServiceRpcClient;
 
     /**
      * Hello string.
@@ -29,6 +29,6 @@ public class HelloRpc4jController {
      */
     @RequestMapping(method = RequestMethod.GET, value = "/hello/{name}")
     public String hello(@PathVariable("name")String name) {
-        return helloRpc4jService.hello(name);
+        return helloServiceRpcClient.hello(name);
     }
 }

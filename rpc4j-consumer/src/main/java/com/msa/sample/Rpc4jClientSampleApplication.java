@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @ComponentScan(basePackages = "com.msa.sample")
-@EnableRpc4jClients(basePackages = "com.msa.sample.api")
+@EnableRpc4jClients
 public class Rpc4jClientSampleApplication {
 	/**
 	 * The entry point of application.
