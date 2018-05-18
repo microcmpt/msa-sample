@@ -2,9 +2,7 @@ package com.msa.sample;
 
 import com.msa.sample.api.HelloRpc4jService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * The type Hello rpc 4 j controller.
@@ -15,21 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version: 1.0.0
  */
 @RestController
+@RequestMapping("/api")
 public class HelloRpc4jController {
-//    /**
-//     * The Hello rpc 4 j service.
-//     */
-//    @Autowired
-//	private HelloRpc4jService helloRpc4jService;
-//
-//    /**
-//     * Hello string.
-//     *
-//     * @param name the name
-//     * @return the string
-//     */
-//    @GetMapping(value = "/api/hello/{name}")
-//    public String hello(@PathVariable("name")String name) {
-//        return helloRpc4jService.hello(name);
-//    }
+    /**
+     * The Hello rpc 4 j service.
+     */
+    @Autowired
+	private HelloRpc4jService helloRpc4jService;
+
+    /**
+     * Hello string.
+     *
+     * @param name the name
+     * @return the string
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/hello/{name}")
+    public String hello(@PathVariable("name")String name) {
+        return helloRpc4jService.hello(name);
+    }
 }
