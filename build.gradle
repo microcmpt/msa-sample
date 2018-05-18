@@ -11,16 +11,3 @@ targetCompatibility = 1.8
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
-
-repositories {
-	mavenLocal()
-	maven { url aliyunMavenUrl }
-}
-
-dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.0.1.RELEASE'
-    compile group: 'org.projectlombok', name: 'lombok', version:'1.16.20'
-    compile group: 'org.apache.zookeeper', name: 'zookeeper', version:'3.4.6'
-    runtime group: 'org.springframework.boot', name: 'spring-boot-devtools', version:'2.0.1.RELEASE'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.0.1.RELEASE'
-}
