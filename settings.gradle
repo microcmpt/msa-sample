@@ -1,5 +1,5 @@
 rootProject.name = 'msa-sample'
-include 'rpc4j-server'
-include 'rpc4j-consumer'
-include 'rpc4j-api'
+include 'sample-rpc4j-server'
+include 'sample-rpc4j-consumer'
+include 'sample-rpc4j-api'
 
