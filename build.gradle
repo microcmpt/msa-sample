@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-group = 'com.msa'
+group = 'com.github.msa'
 version = '0.0.1-SNAPSHOT'
 
 description = """msa-sample"""
