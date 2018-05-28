@@ -25,6 +25,12 @@ public class HelloRpc4jController {
 	private HelloServiceRpcClient helloServiceRpcClient;
 
     /**
+     * The Add service rpc client.
+     */
+    @Resource
+    private AddServiceRpcClient addServiceRpcClient;
+
+    /**
      * Hello string.
      *
      * @param name the name
@@ -33,5 +39,17 @@ public class HelloRpc4jController {
     @RequestMapping(method = RequestMethod.GET, value = "/hello/{name}")
     public String hello(@PathVariable("name")String name) {
         return helloServiceRpcClient.hello(name);
+    }
+
+    /**
+     * Hello int.
+     *
+     * @param a the a
+     * @param b the b
+     * @return the int
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/add/{a}/{b}")
+    public int hello(@PathVariable("a")int a, @PathVariable("b")int b) {
+        return addServiceRpcClient.add(a, b);
     }
 }

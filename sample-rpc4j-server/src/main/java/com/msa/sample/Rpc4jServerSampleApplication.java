@@ -1,5 +1,6 @@
 package com.msa.sample;
 
+import com.msa.regcovery.dashboard.EnableRegcoveryDashboard;
 import com.msa.rpc4j.annotation.EnableRpc4jServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableRpc4jServer
+@EnableRegcoveryDashboard
 public class Rpc4jServerSampleApplication {
 
 	/**
