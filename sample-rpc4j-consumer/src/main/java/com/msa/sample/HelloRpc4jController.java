@@ -42,14 +42,15 @@ public class HelloRpc4jController {
     }
 
     /**
-     * Hello int.
+     * Hello string.
      *
      * @param a the a
      * @param b the b
-     * @return the int
+     * @return the string
      */
     @RequestMapping(method = RequestMethod.GET, value = "/add/{a}/{b}")
-    public int hello(@PathVariable("a")int a, @PathVariable("b")int b) {
-        return addServiceRpcClient.add(a, b);
+    public String hello(@PathVariable("a")int a, @PathVariable("b")int b) {
+        int result = addServiceRpcClient.add(a, b);
+        return a + "+" + b + "=" + result;
     }
 }
