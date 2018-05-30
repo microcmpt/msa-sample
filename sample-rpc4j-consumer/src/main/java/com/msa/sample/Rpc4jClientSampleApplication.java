@@ -1,5 +1,6 @@
 package com.msa.sample;
 
+import com.msa.api.gateway.registry.EnableApiGatewayRegistryClient;
 import com.msa.rpc4j.annotation.EnableRpc4jClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = "com.msa.sample")
 @EnableRpc4jClients
+@EnableApiGatewayRegistryClient
 public class Rpc4jClientSampleApplication {
 	/**
 	 * The entry point of application.
