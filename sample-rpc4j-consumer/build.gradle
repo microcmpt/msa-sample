@@ -12,7 +12,7 @@ tasks.withType(JavaCompile) {
 
 repositories {
     mavenLocal()
-    maven { url aliyunMavenUrl }
+    maven { url releaseMaven }
     maven { url snapshotsMaven }
 }
 dependencies {
