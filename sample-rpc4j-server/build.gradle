@@ -23,5 +23,5 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator:1.5.10.RELEASE'
     compile group: 'com.github.microcmpt', name: 'spring-boot-msa-rpc4j-starter', version: '1.0.1'
     compile 'org.quartz-scheduler:quartz:2.3.0'
-    compile ('com.github.microcmpt:spring-boot-api-regcovery-dashboard-starter:1.0.1')
+    compile ('com.github.microcmpt:spring-boot-api-regcovery-dashboard-starter:1.0.2')
 }
